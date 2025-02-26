@@ -18,10 +18,10 @@ export default function Header() {
                 <div>
                     <button className={styles.buttons}
                             onClick={() => navigate("/login")}>
-                        <img src={profile} alt="Logo da Livraria"/>
+                        <img src={profile} alt="Logo de Perfil"/>
                     </button>
                     <button className={styles.buttons}>
-                        <img src={shop} alt="Logo da Livraria"/>
+                        <img src={shop} alt="Logo do Shop"/>
                     </button>
                 </div>
             </nav>

@@ -1,0 +1,106 @@
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    padding: 80px 100px 80px 100px;
+    gap: 80px;
+}
+
+.login {
+    width: 720px;
+    height: 1024px;
+}
+
+.logo {
+    width: 120px;
+    height: 78px;
+    align-self: center;
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.welcome > h2 {
+    color: #090937;
+    font-size: 32px;
+    font-weight: 700;
+    font-family: "Manrope", sans-serif;
+    line-height: 43.71px;
+}
+
+.welcome > p {
+    color: #09093799;
+    font-size: 24px;
+    font-weight: 500;
+    font-family: "Manrope", sans-serif;
+    line-height: 32.78px;
+}
+
+.forms {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.inputs > p {
+    font-size: 20px;
+    font-weight: 550;
+    font-family: "Manrope", sans-serif;
+    line-height: 27.32px;
+    color: #090937;
+}
+
+.inputs > input {
+    width: 400px;
+    height: 60px;
+    border-radius: 4px;
+    border: none;
+    background-color: #F4F4FF;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: "Manrope", sans-serif;
+    line-height: 27.32px;
+    color: #090937;
+    padding-left: 16px;
+}
+
+.inputs > input::placeholder {
+    padding: 16px;
+    padding-left: 0px;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: "Manrope", sans-serif;
+    line-height: 27.32px;
+    color: #09093766;
+}
+
+.submits {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.button {
+    background-color: #FFFFFF;
+    color: #6251DD;
+    border: 1px solid #6251DD;
+}
+
+.button:hover {
+    background-color: #6251DD;
+    border: none;
+    color: #FFFFFF;
+}

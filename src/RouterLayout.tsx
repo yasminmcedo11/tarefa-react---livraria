@@ -6,9 +6,7 @@ export default function RooterLayout() {
     return (
         <>
             <Header/>
-            <main>
-                <Outlet/>
-            </main>
+            <Outlet/>
         </>
     )
 }

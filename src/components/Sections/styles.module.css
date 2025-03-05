@@ -25,6 +25,7 @@ section {
     display: flex;
     flex-direction: row;
     padding: 0;
+    gap: 20px;
 }
 
 .lista > li {

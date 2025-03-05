@@ -28,16 +28,6 @@ export default function Genres() {
                             <p className={styles.price}>R$32,90</p>
                         </div>
                     </li>
-                    <li>
-                        <img src={fotoBanner} className={styles.foto} alt="Capa do Livro"/>
-                        <div>
-                            <div className={styles.info}>
-                                <h2>Nome do Livro</h2>
-                                <p>Autor do Livro</p>
-                            </div>
-                            <p className={styles.price}>R$32,90</p>
-                        </div>
-                    </li>
                 </ul>
             </main>
         </>

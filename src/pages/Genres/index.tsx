@@ -1,5 +1,5 @@
 import styles from "./styles.module.css"
-import { FaSearch } from "react-icons/fa";
+import { FaChevronLeft, FaSearch } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import api from "../../services/api";
 import formatarPreco from "../../hooks/Price";
@@ -49,7 +49,7 @@ export default function Genres() {
             />
         </div>
             <main>
-                <h2> {generoLivro}</h2>
+                <h2> <FaChevronLeft size={16}/>  {generoLivro}</h2>
                 <ul className={styles.lista}>
                 {livros.map((livro, index) => (
                         <li key={index} onClick={()=> navigate(`/book/${livro.id}`)}>

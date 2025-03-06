@@ -52,12 +52,10 @@ main > h2 {
 }
 
 .lista {
-    display: flex;
-    flex-direction: row;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+    padding: 0;
 }
 
 .lista > li {
@@ -85,20 +83,11 @@ main > h2 {
     gap: 25px;
 }
 
-.price {
-    font-size: 24px;
-    font-weight: 700;
-    font-family: "Manrope", sans-serif;
-    line-height: 32.78px;
-    color: #6251DD;
-    align-items: flex-end;
-}
-
 .info {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    align-items: flex-start;
+    flex-grow: 1;
 }
 
 .info > h2 {
@@ -107,12 +96,26 @@ main > h2 {
     font-family: "Manrope", sans-serif;
     line-height: 27.32px;
     color: #090937;
+    display: block;
+    word-wrap: break-word; /* Permite quebra */
+    overflow-wrap: break-word;
+    white-space: normal;
 }
 
-.info > p {
+.autor {
     font-size: 16px;
     font-weight: 600;
-    font-family: "Manrope", sans-serif;
-    line-height: 21.86px;
     color: #09093799;
+    font-family: "Manrope", sans-serif;
 }
+
+.price {
+    font-size: 24px;
+    font-weight: 700;
+    font-family: "Manrope", sans-serif;
+    line-height: 32.78px;
+    color: #6251DD;
+    align-items: flex-end;
+    margin-top: 40px;
+}
+

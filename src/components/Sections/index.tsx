@@ -1,6 +1,5 @@
 import ShowMoreButton from "../Buttons/ShowMoreButtons";
 import styles from "./styles.module.css"
-import fotoBanner from "../../assets/Banner.png"
 import { useEffect, useState } from "react";
 import api from "../../services/api";
 import formatarPreco from "../../hooks/Price";

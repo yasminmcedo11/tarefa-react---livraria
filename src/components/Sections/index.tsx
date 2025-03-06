@@ -3,6 +3,7 @@ import styles from "./styles.module.css"
 import { useEffect, useState } from "react";
 import api from "../../services/api";
 import formatarPreco from "../../hooks/Price";
+import { useNavigate } from "react-router-dom";
 
 interface Livro {
     id: number
@@ -22,8 +23,7 @@ export default function Sections({ genre }: SectionsProps){
     const [livros, setLivros] = useState<Livro[]>([])
     const generoLivro = genre
     const [genero, setGenero] = useState<string>(generoLivro);
-
-    
+    const navigate = useNavigate()
 
     useEffect(() => {
         api.get("/livros")
@@ -49,7 +49,7 @@ export default function Sections({ genre }: SectionsProps){
                 <div>
                     <ul className={styles.lista}>
                     {livros.map((livro, index) => (
-                        <li key={index}>
+                        <li key={index} onClick={()=> navigate(`/book/${livro.id}`)}>
                             <img src={livro.capa} className={styles.foto} alt="Capa do Livro"/>
                             <div className={styles.container}>
                                 <div>

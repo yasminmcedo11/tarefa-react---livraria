@@ -3,6 +3,7 @@ import { FaSearch } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import api from "../../services/api";
 import formatarPreco from "../../hooks/Price";
+import { useParams } from "react-router-dom";
 
 interface Livro {
     id: number
@@ -14,10 +15,13 @@ interface Livro {
     capa: string
 }
 
+type GenreParams = Record<string, string | undefined>;
+
 export default function Genres() {
+    const { genre } = useParams<GenreParams>();
     const [livros, setLivros] = useState<Livro[]>([])
-    const generoLivro = "Fantasia"
-    const [genero, setGenero] = useState<string>(generoLivro);
+    const generoLivro = genre
+    const [genero, setGenero] = useState<string>(genre || "")
 
     useEffect(() => {
         api.get("/livros")

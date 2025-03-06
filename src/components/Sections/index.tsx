@@ -44,7 +44,7 @@ export default function Sections({ genre }: SectionsProps){
             <section>
                 <div className={styles.indice}>
                     <h2>{generoLivro}</h2>
-                    <ShowMoreButton/>
+                    <ShowMoreButton genre={generoLivro}/>
                 </div>
                 <div>
                     <ul className={styles.lista}>

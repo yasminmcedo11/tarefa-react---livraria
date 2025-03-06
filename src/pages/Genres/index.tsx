@@ -22,6 +22,7 @@ export default function Genres() {
     const [livros, setLivros] = useState<Livro[]>([])
     const generoLivro = genre
     const [genero, setGenero] = useState<string>(genre || "")
+    const [filtro, setFiltro] = useState<string>('')
     const navigate = useNavigate()
 
     useEffect(() => {
@@ -37,6 +38,10 @@ export default function Genres() {
           })
     }, [genero])
 
+    const livrosFiltrados = livros.filter(livro =>
+        (livro.titulo).toLowerCase().includes(filtro.toLowerCase())
+      );
+
     return (
         <>
         <div className={styles.container}>
@@ -44,14 +49,14 @@ export default function Genres() {
             <input 
                 className={styles.search}
                 placeholder={`Pesquisar por título`}
-                //value={filtro}
-                //onChange={(e) => setFiltro(e.target.value)}
+                value={filtro}
+                onChange={(e) => setFiltro(e.target.value)}
             />
         </div>
             <main>
                 <h2> <FaChevronLeft size={16}/>  {generoLivro}</h2>
                 <ul className={styles.lista}>
-                {livros.map((livro, index) => (
+                {livrosFiltrados.map((livro, index) => (
                         <li key={index} onClick={()=> navigate(`/book/${livro.id}`)}>
                             <img src={livro.capa} className={styles.foto} alt="Capa do Livro"/>
                             <div className={styles.info}>

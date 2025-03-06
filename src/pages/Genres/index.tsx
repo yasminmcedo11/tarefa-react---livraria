@@ -3,7 +3,7 @@ import { FaSearch } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import api from "../../services/api";
 import formatarPreco from "../../hooks/Price";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 interface Livro {
     id: number
@@ -22,6 +22,7 @@ export default function Genres() {
     const [livros, setLivros] = useState<Livro[]>([])
     const generoLivro = genre
     const [genero, setGenero] = useState<string>(genre || "")
+    const navigate = useNavigate()
 
     useEffect(() => {
         api.get("/livros")
@@ -51,7 +52,7 @@ export default function Genres() {
                 <h2> {generoLivro}</h2>
                 <ul className={styles.lista}>
                 {livros.map((livro, index) => (
-                        <li key={index}>
+                        <li key={index} onClick={()=> navigate(`/book/${livro.id}`)}>
                             <img src={livro.capa} className={styles.foto} alt="Capa do Livro"/>
                             <div className={styles.info}>
                                 <div>

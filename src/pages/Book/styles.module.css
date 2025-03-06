@@ -10,6 +10,7 @@ section > h2{
     font-family: "Manrope", sans-serif;
     line-height: 32.78px;
     color: #090937;
+    cursor: pointer;
 }
 
 .container {

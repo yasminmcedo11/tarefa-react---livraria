@@ -54,7 +54,7 @@ export default function Genres() {
             />
         </div>
             <main>
-                <h2> <FaChevronLeft size={16}/>  {generoLivro}</h2>
+                <h2 onClick={() => navigate("/")}> <FaChevronLeft size={16}/>  {generoLivro}</h2>
                 <ul className={styles.lista}>
                 {livrosFiltrados.map((livro, index) => (
                         <li key={index} onClick={()=> navigate(`/book/${livro.id}`)}>
